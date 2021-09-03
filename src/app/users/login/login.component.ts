@@ -17,21 +17,26 @@ export class LoginComponent implements OnInit {
     ){}
 
   ngOnInit() {
-    this.onLogin;
+    // this.onLogin;
   }
 
   onLogin (loginForm: NgForm){
    console.log(loginForm.value); 
-  const token =  this.authService.authUser(loginForm.value);
-  if(token){
-    localStorage.setItem('token',token.email);
-    this.alertify.success('Login Successful');
-   // this.router.navigate(['/main-section']);
-   this.router.navigate(['/welcome'])
+    const token =  this.authService.authUser(loginForm.value);
+    if(token){
+      localStorage.setItem('token',token.email);
+      this.alertify.success('Login Successful');
+      // this.router.navigate(['/main-section']);
+      this.router.navigate(['/welcome'])
+    }
+    else{
+      this.alertify.error('User id or password is wrong');
+    }
   }
-  else{
-    this.alertify.error('User id or password is wrong');
-  }
+
+  onLoginClick() {
+    this.onLogin;
+
   }
 
 }

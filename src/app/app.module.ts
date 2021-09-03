@@ -28,6 +28,7 @@ import { WelcomePageComponent } from './dashboard/welcome-page/welcome-page.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainsectionComponent } from './mainsection/mainsection.component';
+import { MainPageComponent } from './dashboard/main-page/main-page.component';
 
 const appRoutes: Routes = [
     { path: '', component: RegisterComponent },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     {path: 'add-department', component: AddDepartmentComponent},
     {path: 'add-employee', component: AddEmployeeComponent},
     {path: 'department-list', component: DepartmentListComponent},
-    {path: 'welcome', component: WelcomePageComponent},
+    // {path: 'welcome', component: WelcomePageComponent},
+    {path: 'welcome', component: MainPageComponent},
     {path:'main-section', component: MainsectionComponent }
 ]
 
@@ -57,7 +59,8 @@ const appRoutes: Routes = [
     EmployeeListComponent,
     SearchFilterPipe,
     WelcomePageComponent,
-    MainsectionComponent
+    MainsectionComponent,
+    MainPageComponent
   ],
 
   imports: [

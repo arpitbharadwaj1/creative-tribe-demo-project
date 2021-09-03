@@ -7,15 +7,14 @@
 <!-- <app-side-bar *ngIf="loggedIn()"></app-side-bar>
 <app-footer *ngIf="loggedIn()"></app-footer> -->
 
-<div *ngIf="loggedIn();else content">
-
-    <app-side-bar></app-side-bar>
-    <app-footer></app-footer>
-    </div>
+<div *ngIf="isLoggedin;else content">
+    <!-- <app-side-bar></app-side-bar> -->
+    <!-- <app-footer></app-footer> -->
+</div>
     
-    <ng-template #content>
-        <!-- <app-login></app-login> -->
-    </ng-template>
+<ng-template #content>
+    <!-- <app-login></app-login> -->
+</ng-template>
 
 <!-- <app-nav-bar></app-nav-bar>
 <div class="container" style="margin-top: 50px;">
