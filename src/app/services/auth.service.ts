@@ -6,14 +6,7 @@ import { User } from "../model/user";
 @Injectable({
     providedIn: 'root'
 })
-export class AuthService{
-
- 
-    private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-    
-    get isLoggedIn() {
-        return this.loggedIn.asObservable();
-      }
+export class AuthService{    
     constructor( private router: Router){}
    
     authUser(user: any){
@@ -25,15 +18,14 @@ export class AuthService{
                 p.email === user.email && 
                 p.password === user.password
         )
-    }login(user: User) {
+    }
+    login(user: User) {
         if (user.email !== '' && user.password !== '' ) {
-          this.loggedIn.next(true);
           this.router.navigate(['/']);
         }
       }
     
       logout() {
-        this.loggedIn.next(false);
         this.router.navigate(['/login']);
       }
 }

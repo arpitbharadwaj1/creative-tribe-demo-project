@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token',token.email);
       this.alertify.success('Login Successful');
       // this.router.navigate(['/main-section']);
-      this.router.navigate(['/welcome'])
+      this.router.navigateByUrl('/welcome')
     }
     else{
       this.alertify.error('User id or password is wrong');

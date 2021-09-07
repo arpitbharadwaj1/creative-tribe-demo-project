@@ -12,8 +12,4 @@ export class WelcomePageComponent implements OnInit {
   ngOnInit(){
   }
 
-  loggedIn(){
-    return localStorage.getItem('token');
-  }
-
 }

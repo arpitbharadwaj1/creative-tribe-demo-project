@@ -1,37 +1,19 @@
-<app-nav-bar></app-nav-bar>
-<router-outlet ></router-outlet>
-<div class="container" style="margin-top: 50px;">
-</div>
-<!-- <app-side-bar></app-side-bar>
-<app-footer></app-footer> -->
-<!-- <app-side-bar *ngIf="loggedIn()"></app-side-bar>
-<app-footer *ngIf="loggedIn()"></app-footer> -->
-
-<div *ngIf="isLoggedin;else content">
-    <!-- <app-side-bar></app-side-bar> -->
-    <!-- <app-footer></app-footer> -->
-</div>
-    
-<ng-template #content>
-    <!-- <app-login></app-login> -->
-</ng-template>
-
-<!-- <app-nav-bar></app-nav-bar>
-<div class="container" style="margin-top: 50px;">
-</div>
-
 <router-outlet></router-outlet>
-<div *ngIf="loggedIn();else content">
-
-<app-side-bar></app-side-bar>
-<app-footer></app-footer>
+<div class="container" style="margin-top: 50px;">
 </div>
-
-<ng-template #content>
-    <app-login></app-login>
-</ng-template> -->
+<app-nav-bar></app-nav-bar>
 
 
-<!-- <router-outlet></router-outlet> -->
-<!-- <app-side-bar></app-side-bar>
-<app-footer></app-footer> -->
+
+
+
+
+
+
+<!-- <app-side-bar></app-side-bar> -->
+<!-- <app-footer ></app-footer> -->
+
+<!-- <div *ngIf="router.url !== '/'  &&  router.url !== '/login'">
+    <app-side-bar></app-side-bar>
+    <app-footer></app-footer>
+ </div> -->

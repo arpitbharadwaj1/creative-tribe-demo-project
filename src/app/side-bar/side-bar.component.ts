@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AlertifyService } from '../services/alretify.service';
 import { AuthService } from '../services/auth.service';
-
+import { LoginComponent } from '../users/login/login.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -15,10 +15,10 @@ export class SideBarComponent implements OnInit {
   opened = true;
 
   over!: 'over';
-  constructor( private alertify: AlertifyService,private router: Router,private authService: AuthService) { }
+  constructor( private alertify: AlertifyService,public router: Router,private authService: AuthService) { }
 
   ngOnInit() {
-    //this.isLoggedIn$ = this.authService.isLoggedIn;
+    
   }
   loggedIn() {
     return localStorage.getItem('token');
