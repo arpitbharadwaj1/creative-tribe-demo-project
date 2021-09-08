@@ -13,6 +13,7 @@ export class AddEmployeeComponent implements OnInit {
 
   formvalue !: FormGroup;
   employeeModelObj: EmployeeModel = new EmployeeModel();
+  userSubmitted: Boolean = false;
   constructor(
     private formbuilder: FormBuilder,
     private alertify: AlertifyService,

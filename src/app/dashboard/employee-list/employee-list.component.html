@@ -1,17 +1,13 @@
-<div class="table-responsive">
-
-    <!-- <nav class="navbar">
-    <input class="form-control" type="text"  name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()" placeholder="Enter first name to search" >
-</nav> -->
-    <div class="form-group row mt-5">
+<div class="table-responsive " >
+    <div class="form-group row margin">
         <label for="firstName" class="col-sm-2 col-form-label" style="text-align: right;">Search</label>
         <div class="col-sm-6">
             <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
         </div>
     </div>
 
-    <!-- style="margin-left:15%" -->
-    <table class="table mt-3 table-striped table-bordered table-hover shadow" style="margin-left:1%">
+  
+    <table class="table mt-3 table-striped table-bordered table-hover shadow" >
         <thead class="thead-dark">
             <tr >
                 <th class="col-2">EmployeeID</th>
@@ -33,7 +29,7 @@
                 <td class="col-2">{{row.department}}</td>
                 <td class="col-2">{{row.salary}}</td>
                 <td class="col-2">
-                    <!-- <button class="btn btn-primary">Edit</button> -->
+                   
                     <button class="btn btn-danger mx-3" (click)="deleteEmployee(row)">Delete</button>
                 </td>
             </tr>

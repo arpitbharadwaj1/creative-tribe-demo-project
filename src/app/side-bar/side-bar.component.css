@@ -1,5 +1,6 @@
 ng-sidebar-container{
     height: 100vh;
+    
 }
 
 ::ng-deep .ng-sidebar{
@@ -7,7 +8,7 @@ ng-sidebar-container{
     width: 300px;
     padding: 2em 3em;
     text-align: left;
-    /* box-shadow: 0 0 2.5em rgb(85,85, 85, 0.5); */
+    
 }
 
 .menu{

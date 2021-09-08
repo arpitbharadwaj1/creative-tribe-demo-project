@@ -27,13 +27,13 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { WelcomePageComponent } from './dashboard/welcome-page/welcome-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MainsectionComponent } from './mainsection/mainsection.component';
+
 import { MainPageComponent } from './dashboard/main-page/main-page.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  // {path: 'sidebar',component: SideBarComponent},
+  
 
   { path: '', redirectTo: 'register' , pathMatch:'prefix' },
 
@@ -48,7 +48,7 @@ const appRoutes: Routes = [
       { path: 'department-list', component: DepartmentListComponent },
     ]
   },
-  { path: 'main-section', component: MainsectionComponent }
+  
 
   // {path: 'welcome', component: WelcomePageComponent},
 
@@ -68,7 +68,7 @@ const appRoutes: Routes = [
     EmployeeListComponent,
     SearchFilterPipe,
     WelcomePageComponent,
-    MainsectionComponent,
+  
     MainPageComponent
   ],
 

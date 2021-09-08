@@ -33,14 +33,6 @@
       "salary": "50000"
     },
     {
-      "id": 18,
-      "firstName": "Gunjan",
-      "lastName": "Verma",
-      "dob": "12-12-12",
-      "department": "QA",
-      "salary": "30000"
-    },
-    {
       "id": 19,
       "firstName": "Arpit",
       "lastName": "Bharadwaj",
@@ -57,20 +49,28 @@
       "salary": "200000"
     },
     {
-      "id": 21,
-      "firstName": "arpit",
-      "lastName": "bharadwa",
-      "dob": "2021-08-09",
-      "department": "IT",
-      "salary": "31"
-    },
-    {
       "id": 22,
       "firstName": "sriya ",
       "lastName": "sahoo",
       "dob": "2021-08-20",
       "department": "ASE",
       "salary": "26339"
+    },
+    {
+      "id": 23,
+      "firstName": "nirmala",
+      "lastName": "kumari",
+      "dob": "2021-09-07",
+      "department": "Lead ER.",
+      "salary": "999999"
+    },
+    {
+      "id": 26,
+      "firstName": "joe",
+      "lastName": "biden",
+      "dob": "2021-08-05",
+      "department": "ASE",
+      "salary": "122"
     }
   ],
   "comments": [
@@ -171,9 +171,17 @@
       "salary": 0
     },
     {
-      "id": 26,
-      "firstName": "sriya",
-      "lastName": "sahoo",
+      "id": 27,
+      "firstName": "nirmala",
+      "lastName": "kumari",
+      "dob": "",
+      "department": "Manager",
+      "salary": 0
+    },
+    {
+      "id": 28,
+      "firstName": "modi",
+      "lastName": "ji",
       "dob": "",
       "department": "SE",
       "salary": 0
