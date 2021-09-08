@@ -38,8 +38,9 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'register' , pathMatch:'prefix' },
 
   {
-    path: 'welcome', component: MainPageComponent
-    , children: [
+    path: '', component: MainPageComponent,
+    children: [
+      { path: 'welcome', component: WelcomePageComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
       { path: 'employee-list', component: EmployeeListComponent },
       { path: 'add-department', component: AddDepartmentComponent },
