@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # demo-project
 # demo-project
 # creative-tribe-demo-project
+# angular-demo
