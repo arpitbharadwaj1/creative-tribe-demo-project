@@ -7,13 +7,16 @@
         </div>
         <div class="card-body ">
           <form [formGroup]="formvalue">
-            <div class="form-group col-12 form-inline ">
-              <label for="firstName" class="form-label">FirstName</label>
-              <input type="text" class="form-control" formControlName="firstName">
+            
+              
+              <div class="form-group col-12 form-inline ">
+              <label for="firstName" class="form-label">Enter Department</label>
+              <input type="text" class="form-control" formControlName="department">
              
+
             </div>
             <br>
-            <div class="form-group col-12">
+            <!-- <div class="form-group col-12">
               <label for="lasttName" class="form-label">LastName</label>
               <input type="text" class="form-control" formControlName="lastName" required>
              
@@ -38,12 +41,13 @@
               </div>
              
               <br>
+            -->
             
             <div class="form-group col-12 ">
               <button type="reset" class="btn btn-success " (click)="postDepartmentDetails()">Submit</button>
               <button type="reset" class="btn btn-primary mx-3">Reset</button>
               <br>
-            </div>
+            </div> 
           </form>
          
         </div>

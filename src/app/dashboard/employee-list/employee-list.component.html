@@ -9,18 +9,24 @@
   
     <table class="table mt-3 table-striped table-bordered table-hover shadow" >
         <thead class="thead-dark">
-            <tr >
-                <th class="col-2">EmployeeID</th>
-                <th class="col-2">Firstname</th>
+            <tr>
+                <th class="col-2" (click)="sort('id')">EmployeeID &nbsp;<i class="fa fa-fw fa-sort"></i></th>
+                <th class="col-2" (click)="sort('firstName')">Firstname &nbsp;<i class="fa fa-fw fa-sort"></i></th>
+                <th class="col-2" (click)="sort('lastName')">Lastname &nbsp;<i class="fa fa-fw fa-sort"></i></th>
+                <th class="col-2" (click)="sort('dob')">Dob &nbsp;<i class="fa fa-fw fa-sort"></i></th>
+                <th class="col-2" (click)="sort('department')">Department &nbsp;<i class="fa fa-fw fa-sort"></i></th>
+                <th class="col-2" (click)="sort('salary')">Salary &nbsp;<i class="fa fa-fw fa-sort"></i></th>
+                
+                <!-- <th class="col-2">Firstname</th>
                 <th class="col-2">Lastname</th>
                 <th class="col-2">Dob</th>
                 <th class="col-2">Department</th>
                 <th class="col-2">Salary</th>
-                <th class="col-2">Action</th>
+                <th class="col-2">Action</th> -->
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let row of employeeData | searchFilter:searchValue |paginate:{itemsPerPage:10, currentPage:p};">
+            <tr *ngFor="let row of employeeData | orderBy: key: reverse | searchFilter:searchValue |paginate:{itemsPerPage:10, currentPage:p};">
 
                 <td class="col-2">{{row.id}}</td>
                 <td class="col-2">{{row.firstName}}</td>

@@ -35,4 +35,11 @@ export class EmployeeListComponent implements OnInit {
       this.getAllEmployees();
     });
   }
+
+  key: string = 'id';
+  reverse: boolean = false;
+  sort(key: string){
+    this.key=key;
+    this.reverse=!this.reverse;
+  }
 }
