@@ -29,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MainPageComponent } from './dashboard/main-page/main-page.component';
+import { AuthGuard } from './services/authguard';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'register' , pathMatch:'prefix' },
 
   {
-    path: '', component: MainPageComponent,
+    path: '', component: MainPageComponent, canActivate: [AuthGuard],
     children: [
       { path: 'welcome', component: WelcomePageComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
@@ -48,9 +49,6 @@ const appRoutes: Routes = [
       { path: 'department-list', component: DepartmentListComponent },
     ]
   },
-  
-
-  // {path: 'welcome', component: WelcomePageComponent},
 
 ]
 
@@ -68,7 +66,6 @@ const appRoutes: Routes = [
     EmployeeListComponent,
     SearchFilterPipe,
     WelcomePageComponent,
-  
     MainPageComponent
   ],
 
@@ -91,7 +88,8 @@ const appRoutes: Routes = [
   providers: [
     UserServiceService,
     AlertifyService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
 
   bootstrap: [AppComponent]
