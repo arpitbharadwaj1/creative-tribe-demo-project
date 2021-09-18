@@ -17,6 +17,8 @@ export class EmployeeListComponent implements OnInit {
   employeeData!: EmployeeModel[];
   p:number = 1;
 
+  rows: number = 3
+
   constructor(private api: ApiService,
     private alertify: AlertifyService) { }
 

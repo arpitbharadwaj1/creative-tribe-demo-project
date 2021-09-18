@@ -3,6 +3,8 @@ import { AlertifyService } from 'src/app/services/alretify.service';
 import { ApiService } from 'src/app/services/api.service';
 import { EmployeeModel } from 'src/app/model/employee.model';
 import { DepartmentModel } from 'src/app/model/department.model';
+import { of } from 'rxjs';
+import { distinct } from 'rxjs/operators';  
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
@@ -21,6 +23,7 @@ export class DepartmentListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllDepartment();
+    this.myDepartment();
   }
 
   getAllDepartment() {
@@ -39,5 +42,10 @@ export class DepartmentListComponent implements OnInit {
   sort(key: string){
     this.key=key;
     this.reverse=!this.reverse;
+  }
+
+  myDepartment(){
+    let dept = 'http://localhost:3000/comments';
+    console.log(dept)
   }
 }

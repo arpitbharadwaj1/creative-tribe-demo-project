@@ -39,6 +39,14 @@
       "dob": "2021-09-11",
       "salary": "10",
       "department": "modi ji"
+    },
+    {
+      "id": 13,
+      "firstName": "arpit",
+      "lastName": "bharadwaj",
+      "dob": "2021-09-08",
+      "salary": "1234",
+      "department": "Software Engineer"
     }
   ],
   "comments": [
@@ -89,22 +97,6 @@
       "dob": "",
       "department": "Data Science",
       "salary": 0
-    },
-    {
-      "id": 7,
-      "firstName": null,
-      "lastName": null,
-      "dob": "",
-      "department": "Lead",
-      "salary": 0
-    },
-    {
-      "id": 8,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "salary": 0,
-      "department": "support analyst"
     }
   ],
   "profile": {

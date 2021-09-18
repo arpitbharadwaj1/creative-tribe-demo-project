@@ -6,10 +6,11 @@
         Add Employee
       </div>
       <div class="card-body ">
-        <form [formGroup]="formvalue">
+        <form [formGroup]="formvalue" #loginForm = 'ngForm'>
           <div class="form-group col-12 form-inline ">
             <label for="firstName" class="form-label">FirstName</label>
-            <input type="text" class="form-control" formControlName="firstName">
+            <input type="text" class="form-control" formControlName="firstName" required>
+            
 
           </div>
 
@@ -56,7 +57,7 @@
 
           <br>
           <div class="form-group col-12 ">
-            <button type="reset" class="btn btn-success " (click)="postEmployeeDetails()">Submit</button>
+            <button [disabled] = "!loginForm.valid" type="reset" class="btn btn-success " (click)="postEmployeeDetails()">Submit</button>
             <button type="submit" class="btn btn-primary mx-3">Reset</button>
             <br><br>
           </div>

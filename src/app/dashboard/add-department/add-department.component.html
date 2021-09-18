@@ -6,14 +6,13 @@
           Add Department
         </div>
         <div class="card-body ">
-          <form [formGroup]="formvalue">
+          <form [formGroup]="formvalue" #loginForm = 'ngForm'>
             
               
               <div class="form-group col-12 form-inline ">
-              <label for="firstName" class="form-label">Enter Department</label>
+              <label for="department" class="form-label">Enter Department</label>
               <input type="text" class="form-control" formControlName="department">
-             
-
+              <!-- <input type="text" class="form-control" id="username" name="username" required> -->
             </div>
             <br>
             <!-- <div class="form-group col-12">
@@ -44,12 +43,11 @@
             -->
             
             <div class="form-group col-12 ">
-              <button type="reset" class="btn btn-success " (click)="postDepartmentDetails()">Submit</button>
+              <button  type="reset" class="btn btn-success " (click)="postDepartmentDetails()">Submit</button>
               <button type="reset" class="btn btn-primary mx-3">Reset</button>
               <br>
             </div> 
-          </form>
-         
+          </form> 
         </div>
       </div>
     </div>
