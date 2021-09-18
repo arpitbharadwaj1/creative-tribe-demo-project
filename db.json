@@ -31,6 +31,14 @@
       "dob": "2021-09-05",
       "department": "SSE",
       "salary": "50000"
+    },
+    {
+      "id": 12,
+      "firstName": "narendra",
+      "lastName": "modi",
+      "dob": "2021-09-11",
+      "salary": "10",
+      "department": "modi ji"
     }
   ],
   "comments": [
@@ -92,11 +100,11 @@
     },
     {
       "id": 8,
-      "firstName": null,
-      "lastName": null,
+      "firstName": "",
+      "lastName": "",
       "dob": "",
-      "department": "Technical support",
-      "salary": 0
+      "salary": 0,
+      "department": "support analyst"
     }
   ],
   "profile": {

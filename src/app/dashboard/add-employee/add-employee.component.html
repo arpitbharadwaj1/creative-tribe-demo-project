@@ -29,16 +29,18 @@
             <label for="passwrod" class="form-label">Department</label>
 
 
-            <select class="form-control" formControlName="department" type="reset">
-              <option>Sales</option>
-              <option>IT</option>
-              <option>QA</option>
-              <option>ASE</option>
+            <select  class="form-control" formControlName="department" type="reset">
+              <option value="-1">--Please select department--</option>
+              <option *ngFor="let row of departmentData">{{row.department}}</option>
+            <!-- {{row.department}} -->
+              <!-- <option>{{row.department}}</option> -->
+              <!-- <option>IT</option>
+                <option>ASE</option>
               <option>SE</option>
               <option>SSE</option>
               <option>Lead ER.</option>
-              <option>SSE</option>
-            </select>
+              <option>SSE</option> -->
+              </select>
 
 
 

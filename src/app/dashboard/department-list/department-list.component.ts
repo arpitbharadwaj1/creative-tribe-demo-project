@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertifyService } from 'src/app/services/alretify.service';
 import { ApiService } from 'src/app/services/api.service';
 import { EmployeeModel } from 'src/app/model/employee.model';
+import { DepartmentModel } from 'src/app/model/department.model';
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
@@ -11,11 +12,12 @@ export class DepartmentListComponent implements OnInit {
 
   searchValue!: string;
   firstNamee: any;
-  employeeData!: EmployeeModel[];
+  //employeeData!: EmployeeModel[];
+  departmentData!: DepartmentModel[];
   p: number = 1;
 
   constructor(private api: ApiService,
-    private alertify: AlertifyService) { }
+    private alertify: AlertifyService) {}
 
   ngOnInit() {
     this.getAllDepartment();
@@ -23,7 +25,7 @@ export class DepartmentListComponent implements OnInit {
 
   getAllDepartment() {
     this.api.getDepartment().subscribe(res => {
-      this.employeeData = res;
+      this.departmentData = res;
     })
   }
   deleteDepartment(row: any) {

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertifyService } from 'src/app/services/alretify.service';
 import { EmployeeModel } from 'src/app/model/employee.model';
+import { DepartmentModel } from 'src/app/model/department.model';
 import { ApiService } from 'src/app/services/api.service';
+
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
@@ -13,7 +15,9 @@ export class AddEmployeeComponent implements OnInit {
 
   formvalue !: FormGroup;
   employeeModelObj: EmployeeModel = new EmployeeModel();
+  departmentModelObj: DepartmentModel = new DepartmentModel();
   userSubmitted: Boolean = false;
+  // getDepartment:any
   constructor(
     private formbuilder: FormBuilder,
     private alertify: AlertifyService,
@@ -28,6 +32,7 @@ export class AddEmployeeComponent implements OnInit {
       department: [null, Validators.required],
       salary: [null, Validators.required]
     });
+    this.getAllDepartment();
   }
 
   postEmployeeDetails() {
@@ -39,7 +44,7 @@ export class AddEmployeeComponent implements OnInit {
 
     this.api.postEmployee(this.employeeModelObj).subscribe(
       data => {
-        console.log(data);
+       
         this.alertify.success('Employee added successfully');
         this.getAllEmployees();
       },
@@ -49,21 +54,13 @@ export class AddEmployeeComponent implements OnInit {
       }
     );
   }
-  // get firstName(){
-  //   return this.registerationForm.get('firstName') as FormControl;
-  // }
-  // get lastName(){
-  //   return this.registerationForm.get('lastName') as FormControl;
-  // }
-  // get email(){
-  //   return this.registerationForm.get('email') as FormControl;
-  // }
-  // get password(){
-  //   return this.registerationForm.get('password') as FormControl;
-  // } 
-  // get confirmPassword(){
-  //   return this.registerationForm.get('confirmPassword') as FormControl;
-  // }
+
+  getAllDepartment() {
+    this.api.getDepartment().subscribe(res => {
+      this.departmentData = res;
+    })
+  }
+  
 }
 
 

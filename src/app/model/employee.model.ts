@@ -3,6 +3,6 @@ export class EmployeeModel {
     firstName: string = "";
     lastName: string = "";
     dob: string = "";
-    department: string = "";
     salary: number = 0;
+    department: string = "";
 }
