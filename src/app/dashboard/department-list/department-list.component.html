@@ -38,7 +38,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let row of departmentData | orderBy: key: reverse | searchFilter:searchValue | paginate:{itemsPerPage: pageSize , currentPage:p };">
+            <tr *ngFor="let row of employeeData | orderBy: key: reverse | searchFilter:searchValue | paginate:{itemsPerPage: pageSize , currentPage:p };">
 
            <td class="col-2">{{row.id}}</td>
              <!--    <td class="col-2">{{row.firstName}}</td>

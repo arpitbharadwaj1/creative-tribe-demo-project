@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertifyService } from 'src/app/services/alretify.service';
 import { ApiService } from 'src/app/services/api.service';
-import { EmployeeModel } from 'src/app/model/employee.model';
-import { DepartmentModel } from 'src/app/model/department.model';
-import { of } from 'rxjs';
-import { distinct } from 'rxjs/operators';  
+import { EmployeeModel } from 'src/app/model/employee.model'; 
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
@@ -14,7 +11,7 @@ export class DepartmentListComponent implements OnInit {
 
   searchValue!: string;
   firstNamee: any;
-  departmentData!: DepartmentModel[];
+  employeeData!: EmployeeModel[];
   p: number = 1;
   pageSize!:number
   hello!:number
@@ -28,7 +25,7 @@ export class DepartmentListComponent implements OnInit {
 
   getAllDepartment() {
     this.api.getDepartment().subscribe(res => {
-      this.departmentData = res;
+      this.employeeData = res;
     })
   }
 

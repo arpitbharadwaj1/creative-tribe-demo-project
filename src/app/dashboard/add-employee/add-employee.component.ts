@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertifyService } from 'src/app/services/alretify.service';
 import { EmployeeModel } from 'src/app/model/employee.model';
-import { DepartmentModel } from 'src/app/model/department.model';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -15,7 +14,7 @@ export class AddEmployeeComponent implements OnInit {
 
   formvalue !: FormGroup;
   employeeModelObj: EmployeeModel = new EmployeeModel();
-  departmentModelObj: DepartmentModel = new DepartmentModel();
+  
   userSubmitted: Boolean = false;
   // getDepartment:any
   constructor(
@@ -57,7 +56,7 @@ export class AddEmployeeComponent implements OnInit {
 
   getAllDepartment() {
     this.api.getDepartment().subscribe(res => {
-      this.departmentData = res;
+      this.employeeData = res;
     })
   }
   
