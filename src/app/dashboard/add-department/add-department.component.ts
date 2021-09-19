@@ -1,15 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-add-department',
-//   templateUrl: './add-department.component.html',
-//   styleUrls: ['./add-department.component.css']
-// })
-// export class AddDepartmentComponent implements OnInit {
-//   constructor() { }
-//   ngOnInit(): void {
-//   }
-// }
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertifyService } from 'src/app/services/alretify.service';
@@ -25,6 +13,7 @@ export class AddDepartmentComponent implements OnInit {
 
   formvalue !: FormGroup;
   employeeModelObj: EmployeeModel = new EmployeeModel();
+  data: any
   constructor(
     private formbuilder: FormBuilder,
     private alertify: AlertifyService,
@@ -39,6 +28,7 @@ export class AddDepartmentComponent implements OnInit {
       department: ['', Validators.required],
       salary: ['', Validators.required]
     });
+    this.checkingDepartment();
   }
 
   postDepartmentDetails() {
@@ -52,7 +42,7 @@ export class AddDepartmentComponent implements OnInit {
       data => {
         console.log(data);
         this.alertify.success('Department added successfully');
-        this.getAllEmployees();
+        //this.getAllEmployees();
       },
       err=>{
         console.log(err);
@@ -60,6 +50,15 @@ export class AddDepartmentComponent implements OnInit {
       }
     );
   }
+  
+  checkingDepartment(){
+    //        this.data= JSON.stringify('http://localhost:3000/posts');
+    this.data= JSON.stringify('http://localhost:3000/posts?id=8');
+   // let help = JSON.parse(this.data);
+    //console.log(help);
+   // console.log(help.department)
+  }
+  
 }
 
 

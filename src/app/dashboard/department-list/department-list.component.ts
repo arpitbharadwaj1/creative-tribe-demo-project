@@ -14,16 +14,16 @@ export class DepartmentListComponent implements OnInit {
 
   searchValue!: string;
   firstNamee: any;
-  //employeeData!: EmployeeModel[];
   departmentData!: DepartmentModel[];
   p: number = 1;
-
+  pageSize!:number
+  hello!:number
   constructor(private api: ApiService,
     private alertify: AlertifyService) {}
 
   ngOnInit() {
     this.getAllDepartment();
-    this.myDepartment();
+    this.myDepartment(); 
   }
 
   getAllDepartment() {
@@ -31,6 +31,7 @@ export class DepartmentListComponent implements OnInit {
       this.departmentData = res;
     })
   }
+
   deleteDepartment(row: any) {
     this.api.deleteDepartment(row.id).subscribe(res => {
       this.alertify.success("Department deleted successfully");
@@ -48,4 +49,10 @@ export class DepartmentListComponent implements OnInit {
     let dept = 'http://localhost:3000/comments';
     console.log(dept)
   }
+
+  chooseValue(event:any){
+     this.hello = event.target.value
+      // console.log(this.hello)
+      this.pageSize=this.hello
+  } 
 }

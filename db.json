@@ -97,6 +97,46 @@
       "dob": "",
       "department": "Data Science",
       "salary": 0
+    },
+    {
+      "id": 7,
+      "firstName": "",
+      "lastName": "",
+      "dob": "",
+      "salary": 0,
+      "department": "CA"
+    },
+    {
+      "id": 8,
+      "firstName": null,
+      "lastName": null,
+      "dob": "",
+      "salary": 0,
+      "department": "Fund manager"
+    },
+    {
+      "id": 9,
+      "firstName": null,
+      "lastName": null,
+      "dob": "",
+      "salary": 0,
+      "department": "Teacher"
+    },
+    {
+      "id": 10,
+      "firstName": null,
+      "lastName": null,
+      "dob": "",
+      "salary": 0,
+      "department": "IT support"
+    },
+    {
+      "id": 11,
+      "firstName": "",
+      "lastName": "",
+      "dob": "",
+      "salary": 0,
+      "department": "yoyo"
     }
   ],
   "profile": {

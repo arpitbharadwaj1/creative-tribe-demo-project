@@ -18,6 +18,8 @@ export class EmployeeListComponent implements OnInit {
   p:number = 1;
 
   rows: number = 3
+  hello: any;
+  pageSize: any;
 
   constructor(private api: ApiService,
     private alertify: AlertifyService) { }
@@ -44,4 +46,9 @@ export class EmployeeListComponent implements OnInit {
     this.key=key;
     this.reverse=!this.reverse;
   }
+  chooseValue(event:any){
+    this.hello = event.target.value
+    //  console.log(this.hello)
+     this.pageSize=this.hello
+ } 
 }

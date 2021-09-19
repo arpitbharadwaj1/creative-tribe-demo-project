@@ -1,8 +1,23 @@
 <div class="table-responsive " >
     <div class="form-group row margin">
         <label for="firstName" class="col-sm-2 col-form-label" style="text-align: right;">Search</label>
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
+        </div>
+        <label for="pagination" class="col-sm-2 col-form-label" style="text-align: right;">select columns to display</label>
+        <div class="col-sm-4">
+            
+            <select  class="form-control" type="reset" id="search" (change)="chooseValue($event)">
+                <option value="0">--select columns--</option>
+                <option>2</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>8</option>
+                <option>10</option>
+                <option>20</option> 
+                <option>50</option> 
+                </select>
         </div>
     </div>
 
@@ -22,7 +37,7 @@
             <tr *ngFor="let row of employeeData |
              orderBy: key: reverse |
               searchFilter:searchValue |
-              paginate:{itemsPerPage: 5, currentPage:p};">
+              paginate:{itemsPerPage: pageSize, currentPage:p};">
 
                 <td class="col-2">{{row.id}}</td>
                 <td class="col-2">{{row.firstName}}</td>
