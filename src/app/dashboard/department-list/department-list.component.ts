@@ -15,12 +15,13 @@ export class DepartmentListComponent implements OnInit {
   p: number = 1;
   pageSize!:number
   hello!:number
+  dept:any
   constructor(private api: ApiService,
     private alertify: AlertifyService) {}
 
   ngOnInit() {
     this.getAllDepartment();
-    this.myDepartment(); 
+    // this.myDepartment(); 
   }
 
   getAllDepartment() {
@@ -42,10 +43,10 @@ export class DepartmentListComponent implements OnInit {
     this.reverse=!this.reverse;
   }
 
-  myDepartment(){
-    let dept = 'http://localhost:3000/comments';
-    console.log(dept)
-  }
+  // myDepartment(){
+  //    this.dept = JSON.stringify('http://localhost:3000/comments');
+  //     console.log(this.dept)
+  // }
 
   chooseValue(event:any){
      this.hello = event.target.value

@@ -30,6 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MainPageComponent } from './dashboard/main-page/main-page.component';
 import { AuthGuard } from './services/authguard';
+import { UniqueUsernameValidatorDirective } from './shared/unique-username-validator.directive';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -66,7 +67,8 @@ const appRoutes: Routes = [
     EmployeeListComponent,
     SearchFilterPipe,
     WelcomePageComponent,
-    MainPageComponent
+    MainPageComponent,
+    UniqueUsernameValidatorDirective
   ],
 
   imports: [

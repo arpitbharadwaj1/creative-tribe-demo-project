@@ -6,19 +6,22 @@
           Add Department
         </div>
         <div class="card-body ">
-          <form [formGroup]="formvalue" #loginForm = 'ngForm'>
+          <form [formGroup]="formvalue" >
             
               
               <div class="form-group col-12 form-inline ">
               <label for="department" class="form-label">Enter Department</label>
-              <input type="text" class="form-control" formControlName="department">
+              <input type="text" class="form-control" formControlName="department" name="department" [(ngModel)]="some">
+             <br>
+              <span class="text-danger" *ngIf="department?.invalid && (department?.dirty || department?.touched)">
+                  <p *ngIf="!hello">Department already exist please add another department</p>
+              </span>
               <!-- <input type="text" class="form-control" id="username" name="username" required> -->
             </div>
             <br>
             <!-- <div class="form-group col-12">
               <label for="lasttName" class="form-label">LastName</label>
-              <input type="text" class="form-control" formControlName="lastName" required>
-             
+              <input type="text" class="form-control" formControlName="lastName" required>        
             </div>
             <br>
             <div class="form-group col-12">
@@ -43,7 +46,7 @@
             -->
             
             <div class="form-group col-12 ">
-              <button  type="reset" class="btn btn-success " (click)="postDepartmentDetails()">Submit</button>
+              <button [disabled]="!some " type="reset" class="btn btn-success " (click)="postDepartmentDetails()">Submit</button> 
               <button type="reset" class="btn btn-primary mx-3">Reset</button>
               <br>
             </div> 

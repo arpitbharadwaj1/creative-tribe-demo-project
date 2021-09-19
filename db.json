@@ -91,14 +91,6 @@
       "salary": 0
     },
     {
-      "id": 5,
-      "firstName": null,
-      "lastName": null,
-      "dob": "",
-      "department": "CA",
-      "salary": 0
-    },
-    {
       "id": 6,
       "firstName": null,
       "lastName": null,
@@ -137,22 +129,6 @@
       "dob": "",
       "salary": 0,
       "department": "IT support"
-    },
-    {
-      "id": 11,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "salary": 0,
-      "department": "yoyo"
-    },
-    {
-      "id": 12,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "salary": 0,
-      "department": "Chai wala"
     }
   ],
   "profile": {
