@@ -16,12 +16,14 @@ export class DepartmentListComponent implements OnInit {
   pageSize!:number
   hello!:number
   dept:any
+  department1 = ''
   constructor(private api: ApiService,
     private alertify: AlertifyService) {}
 
   ngOnInit() {
     this.getAllDepartment();
     // this.myDepartment(); 
+    this.getAllDepartment();
   }
 
   getAllDepartment() {
@@ -30,11 +32,27 @@ export class DepartmentListComponent implements OnInit {
     })
   }
 
-  deleteDepartment(row: any) {
-    this.api.deleteDepartment(row.id).subscribe(res => {
-      this.alertify.success("Department deleted successfully");
-      this.getAllDepartment();
-    });
+    deleteDepartment(row: any) {
+     
+  this.api.getEmployee().pipe(
+    //map( result => result.filter( r => r.department == this.department))
+  )
+  .subscribe(res=>{
+    this.department1 = res.map( (x: { department: any; }) => x.department)
+    console.log(res)
+    console.log(this.department1)
+    if(this.department1.includes(row.department)){
+      this.alertify.error("Department cannot be deleted ");
+    }
+    else{
+      this.api.deleteDepartment(row.id).subscribe(res => {
+        this.alertify.success("Department deleted successfully");
+        this.getAllDepartment();
+      });
+    }
+  })
+    console.log('mehta ' +row.department)
+    
   }
   key: string = 'id';
   reverse: boolean = false;

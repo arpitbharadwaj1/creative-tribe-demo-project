@@ -8,6 +8,7 @@ export class ApiService{
     constructor(private http: HttpClient){}
 
     private urlComments = 'http://localhost:3000/comments';
+    private urlPosts = 'http://localhost:3000/posts';
     
     postEmployee(data: any){
         return this.http.post('http://localhost:3000/posts',data)
@@ -63,4 +64,16 @@ export class ApiService{
             params: new HttpParams().set('department', uDept)
         })
     } 
+
+    getDepartmentByDepartment(dept:string){
+        return this.http.get<any[]>(this.urlComments,{
+            params: new HttpParams().set('department',dept)
+        })
+    }
+
+    getEmployeeByDepartment(emp:string){
+        return this.http.get<any[]>(this.urlPosts,{
+            params: new HttpParams().set('department',emp)
+        })
+    }
 }

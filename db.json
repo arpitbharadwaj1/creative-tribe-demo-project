@@ -1,38 +1,6 @@
 {
   "posts": [
     {
-      "id": 8,
-      "firstName": "arpit",
-      "lastName": "bharadwaj",
-      "dob": "2021-09-01",
-      "department": "ASE",
-      "salary": "20000"
-    },
-    {
-      "id": 9,
-      "firstName": "arun ",
-      "lastName": "kumar",
-      "dob": "2021-09-02",
-      "department": "ASE",
-      "salary": "30000"
-    },
-    {
-      "id": 10,
-      "firstName": "rashmi",
-      "lastName": "singh",
-      "dob": "2021-09-03",
-      "department": "SSE",
-      "salary": "40000"
-    },
-    {
-      "id": 11,
-      "firstName": "abhishek",
-      "lastName": "kumar",
-      "dob": "2021-09-05",
-      "department": "SSE",
-      "salary": "50000"
-    },
-    {
       "id": 12,
       "firstName": "narendra",
       "lastName": "modi",
@@ -59,76 +27,20 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "department": "Manager",
-      "salary": 0
-    },
-    {
-      "id": 2,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "department": "Software Engineer",
-      "salary": 0
-    },
-    {
-      "id": 3,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "department": "Associate",
-      "salary": 0
-    },
-    {
-      "id": 4,
-      "firstName": null,
-      "lastName": null,
-      "dob": "",
-      "department": "BDA",
-      "salary": 0
-    },
-    {
-      "id": 6,
-      "firstName": null,
-      "lastName": null,
-      "dob": "",
-      "department": "Data Science",
-      "salary": 0
-    },
-    {
-      "id": 7,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "salary": 0,
-      "department": "CA"
-    },
-    {
       "id": 8,
-      "firstName": null,
-      "lastName": null,
+      "firstName": "",
+      "lastName": "",
       "dob": "",
       "salary": 0,
-      "department": "Fund manager"
+      "department": "modi ji"
     },
     {
       "id": 9,
-      "firstName": null,
-      "lastName": null,
+      "firstName": "",
+      "lastName": "",
       "dob": "",
       "salary": 0,
-      "department": "Teacher"
-    },
-    {
-      "id": 10,
-      "firstName": null,
-      "lastName": null,
-      "dob": "",
-      "salary": 0,
-      "department": "IT support"
+      "department": "Software Engineer"
     }
   ],
   "profile": {
