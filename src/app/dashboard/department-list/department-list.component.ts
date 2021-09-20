@@ -35,7 +35,6 @@ export class DepartmentListComponent implements OnInit {
     deleteDepartment(row: any) {
      
   this.api.getEmployee().pipe(
-    //map( result => result.filter( r => r.department == this.department))
   )
   .subscribe(res=>{
     this.department1 = res.map( (x: { department: any; }) => x.department)

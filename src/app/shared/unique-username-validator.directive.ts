@@ -15,26 +15,6 @@ export function UniqueUsernameValidator(api:ApiService): AsyncValidatorFn{
   };
 }
 
-export function UniqueDepartmentValidator(api:ApiService): AsyncValidatorFn{
-  return (c:AbstractControl): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> =>{
-    return api.getDepartmentByDepartment(c.value).pipe(
-      map(users => {
-        return users && users.length > 0 ? { 'uniqueDepartmentByDepartment' : true} : null;
-      })
-    );
-  };
-}
-
-export function UniqueEmployeeDepartmentValidator(api:ApiService): AsyncValidatorFn{
-  return (c:AbstractControl): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> =>{
-    return api.getEmployeeByDepartment(c.value).pipe(
-      map(users => {
-        return users && users.length > 0 ? { 'uniqueDepartmentByEmployee' : true} : null;
-      })
-    );
-  };
-}
-
  
 @Directive({ 
   selector: '[uniqueUsername]',

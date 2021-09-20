@@ -15,14 +15,6 @@
       "dob": "2021-09-08",
       "salary": "1234",
       "department": "Software Engineer"
-    },
-    {
-      "id": 14,
-      "firstName": "modi ",
-      "lastName": "ji",
-      "dob": "2021-09-01",
-      "salary": "10",
-      "department": "Chai wala"
     }
   ],
   "comments": [
